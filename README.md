@@ -1,2 +1,2 @@
 # Todo-List-JavaScript
-Addvanced Todo List Using Javascript
+Advanced Todo List Using Javascript
