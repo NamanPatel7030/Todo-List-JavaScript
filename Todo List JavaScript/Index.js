@@ -27,10 +27,9 @@
 // }
 
 // let input = prompt("What would you like to do");
-input=prompt("What would you like to do")
-const todos =["Cookie", "Bath"];
+let input=prompt("What would you like to do")
+let todos =["Cookie", "Bath"];  
 while(input!== "quit"){
-    input=prompt("What would you like to do")
     if(input=="Show"){
         console.log("--------------------")
         for(let i=0;i<todos.length;i++){
@@ -41,12 +40,18 @@ while(input!== "quit"){
         
     }
     else if(input=="add"){
-        let newTodo = prompt("Enter a new Task")
         todos.push(newTodo);
+        let newTodo = prompt("Enter a new Task")
         console.log(`${newTodo}is added`)
         
-
+        
+    }
+    else if(input=="delete"){
+        let index = parseInt(prompt("Enter index of the Task"));
+        todos.splice(index-1, 1);
+        console.log(`${todos[index-1]} is deleted`)
     }
     
+    input=prompt("What would you like to do")
 }
 console.log("QUITE APP")
