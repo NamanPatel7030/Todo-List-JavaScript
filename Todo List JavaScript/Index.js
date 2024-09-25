@@ -40,16 +40,16 @@ while(input!== "quit"){
         
     }
     else if(input=="add"){
-        todos.push(newTodo);
         let newTodo = prompt("Enter a new Task")
+        todos.push(newTodo);
         console.log(`${newTodo}is added`)
         
         
     }
     else if(input=="delete"){
         let index = parseInt(prompt("Enter index of the Task"));
-        todos.splice(index-1, 1);
-        console.log(`${todos[index-1]} is deleted`)
+        ItemDeleted=todos.splice(index-1, 1);
+        console.log(`${todos[ItemDeleted]} is deleted`)
     }
     
     input=prompt("What would you like to do")
