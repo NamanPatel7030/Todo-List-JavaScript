@@ -49,7 +49,7 @@ while(input!== "quit"){
     else if(input=="delete"){
         let index = parseInt(prompt("Enter index of the Task"));
         ItemDeleted=todos.splice(index-1, 1);
-        console.log(`${todos[ItemDeleted]} is deleted`)
+        console.log(`${todos[index-1]} is deleted`)
     }
     
     input=prompt("What would you like to do")
