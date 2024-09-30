@@ -1,39 +1,10 @@
-// store=[];
-// while(true){
-//     let userinput= prompt("Enter 1)Add\n 2)Delete\n 3)List All\n 4)QuitApp");
-//     if (userinput==1){
-//         let task = prompt("Enter Your task");
-//         store.push(task);
-//         console.log("YOUR TODO IS ADDED HERE");
-        
-//     }
-//     else if(userinput==2){
-//         console.log(store)
-//         let remove = prompt("Enter index of task")
-//         // let index = store.indexOf(remove);
-//         removedItem=store.splice(remove, 1);
-    
-//         console.log("DELETED ITEM: "+ removedItem );
-
-
-//     }
-//     else if(userinput==3){
-//         console.log(store);
-//     }
-
-//     else break;
-    
-    
-// }
-
-// let input = prompt("What would you like to do");
 let input=prompt("What would you like to do")
-let todos =["Cookie", "Bath"];  
+let todo=[];  
 while(input!== "quit"){
-    if(input=="Show"){
+    if(input=="show"){
         console.log("--------------------")
-        for(let i=0;i<todos.length;i++){
-            console.log(`${i+1}. ${todos[i]}`);
+        for(let i=0;i<todo.length;i++){
+            console.log(`${i+1}. ${todo[i]}`);
         }
         
         console.log("--------------------")
@@ -41,17 +12,24 @@ while(input!== "quit"){
     }
     else if(input=="add"){
         let newTodo = prompt("Enter a new Task")
-        todos.push(newTodo);
+        todo.push(newTodo);
         console.log(`${newTodo}is added`)
         
         
     }
     else if(input=="delete"){
-        let index = parseInt(prompt("Enter index of the Task"));
-        ItemDeleted=todos.splice(index-1, 1);
-        console.log(`${todos[index-1]} is deleted`)
+        let index = parseInt(prompt("Enter Number of that Task"));
+        ItemDeleted=todo.splice(index-1, 1);
+        console.log(`${ItemDeleted} is deleted`)
     }
     
     input=prompt("What would you like to do")
 }
 console.log("QUITE APP")
+
+
+
+[a,b,c,d]
+ 0,1,2,3
+ 1
+ index
